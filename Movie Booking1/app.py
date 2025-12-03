@@ -16,8 +16,8 @@ app.secret_key = 'your_static_secret_key_here'
 # ------------------------------------------------------------------
 
 # REPLACE THESE VALUES WITH YOUR ACTUAL AWS CREDENTIALS
-AWS_ACCESS_KEY_ID = 'YOUR_AWS_ACCESS_KEY_ID_HERE'
-AWS_SECRET_ACCESS_KEY = 'YOUR_AWS_SECRET_ACCESS_KEY_HERE'
+AWS_ACCESS_KEY_ID = 'AKIA6BKVS6KWIE7WLONG'
+AWS_SECRET_ACCESS_KEY = 'LCKZnNDDrUKbyvv60plyPseoer/Z+SsRxVQmchCl'
 AWS_REGION = 'ap-south-1' # Change if your buckets/tables are in a different region
 
 # DynamoDB Table Names (Must start with 'Movie')
@@ -25,7 +25,7 @@ USERS_TABLE_NAME = 'Movie_Users'
 BOOKINGS_TABLE_NAME = 'Movie_Bookings'
 
 # SNS Topic ARN (Ensure this topic exists in the AWS account associated with the keys above)
-SNS_TOPIC_ARN = 'arn:aws:sns:ap-south-1:605134430972:MovieTicketNotifications'
+SNS_TOPIC_ARN = 'arn:aws:sns:ap-south-1:964936528556:TravelGoTopic:9b9597f9-6c57-48c7-a429-97f5eb99829c'
 
 # ------------------------------------------------------------------
 # INITIALIZE AWS SERVICES
@@ -275,4 +275,5 @@ def send_booking_confirmation(booking):
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
+
     app.run(host='0.0.0.0', port=port, debug=True)
